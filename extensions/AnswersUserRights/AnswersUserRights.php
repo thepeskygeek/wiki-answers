@@ -18,15 +18,8 @@ $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 $wgAutoConfirmAge = 4*86000;
 
 ////////// sysop
-// Will be renamed to "supervisor"
-$wgGroupPermissions['supervisor'] = $wgGroupPermissions['sysop'];
-unset($wgGroupPermisions['sysop']);
+// Allow suppression of redirects
+$wgGroupPermissions['sysop']['suppressredirect'] = true;
 
 ////////// bureaucrat
-// Also will be "supervisors"
-$wgGroupPermissions['supervisor']['userrights'] = true;
-unset($wgGroupPermissions['bureaucrat']); // bye, bye
-
-////////// supervisor
-// The merged sysop+bureaucrat groups
-$wgGroupPermissions['supervisor']['suppressredirect'] = true;
+// No changes required
