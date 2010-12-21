@@ -4332,7 +4332,11 @@ $wgUploadMaintenance = false;
 $wgOldChangeTagsIndex = false;
 
 /*
- * Wiki-Answers Message Hack
+ * Wiki-Answers Hacks
  * @author thepeskygeek
  */
 include_once (dirname(__FILE__).'/../extensions/AnswersMessages/AnswersMessages.php');
+require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+require_once($IP.'/extensions/InputBox/InputBox.php');
+require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
+
