@@ -16,10 +16,3 @@ $wgGroupPermissions['*']['move'] = true; // Anons can rename questions
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 // ...and set the limit (4 days)
 $wgAutoConfirmAge = 4*86000;
-
-////////// sysop
-// Allow suppression of redirects
-$wgGroupPermissions['sysop']['suppressredirect'] = true;
-
-////////// bureaucrat
-// No changes required

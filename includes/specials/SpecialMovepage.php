@@ -237,7 +237,8 @@ class MovePageForm {
 				</tr>"
 			);
 		}
-
+		// We will always suppress redirects aka rename
+/*
 		if ( $wgUser->isAllowed( 'suppressredirect' ) ) {
 			$wgOut->addHTML( "
 				<tr>
@@ -249,7 +250,7 @@ class MovePageForm {
 				</tr>"
 			);
 		}
-
+*/
 		if ( $hasRedirects ) {
 			$wgOut->addHTML( "
 				<tr>
@@ -385,7 +386,7 @@ class MovePageForm {
 		}
 
 		# Do the actual move.
-		$error = $ot->moveTo( $nt, true, $this->reason, $createRedirect );
+		$error = $ot->moveTo( $nt, true, $this->reason, false );
 		if ( $error !== true ) {
 			# FIXME: show all the errors in a list, not just the first one
 			$this->showForm( reset( $error ) );
